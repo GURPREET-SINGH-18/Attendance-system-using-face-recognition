@@ -1,0 +1,71 @@
+{% extends 'attendence_sys/main.html' %}
+
+{% block content %}
+<div class="container d-flex justify-content-center">
+    {% for message in messages %}
+    {% if message.tags == 'error' %}
+    <div class="alert alert-danger">
+        {{ message }}
+    </div>
+    {% else %}
+    <div class="alert alert-success">
+        {{ message }}
+    </div>
+    {% endif %}
+    {% endfor %}
+    <div class="container mt-5 d-flex flex-column justify-content-center">
+        <div class="mb-4 d-flex justify-content-center align-items-center">
+            <h1 class="text-center">Welcome to Face Recognition Based Attendance Management System</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <a href="/addstudent" style="color: black">
+                <div class="card" style="background-color: #00ffffcc;height:100%;">
+                    <img class="p-2" src="https://cdn1.iconfinder.com/data/icons/education-set-6/512/add_user-512.png"
+                        class="card-img-top" alt="...">
+                    <div class="card-body d-flex align-items-center justify-content-center">
+                        <h4 class="card-title">Add Student</h4>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="/updateStudentRedirect" style="color: black">
+                <div class="card" style="background-color: #ff008bcc;height:100%;">
+                    <img class="p-2" src="https://library.kissclipart.com/20180830/zww/kissclipart-profile-icon-vector-png-clipart-computer-icons-use-5585094e680348af.png"
+                        class="card-img-top" alt="...">
+                    <div class="card-body d-flex justify-content-center align-item-center">
+                        <h5 class="card-title">Update Student Detail</h5>
+                    </div>
+                </div>
+            </a>
+            </div>
+            <div class="col-md-3">
+                <a href="/searchattendence" style="color: black">
+                <div class="card" style="background-color: #ff8100cc;height:100%;">
+                    <img class="p-2" src="https://www.shareicon.net/data/512x512/2015/09/20/643707_search_512x512.png"
+                        class="card-img-top" alt="...">
+                    <div class="card-body d-flex align-items-center justify-content-center">
+                        <h4 class="card-title">Search Attendance</h4>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="/attendence" style="color: black">
+                <div class="card" style="background-color: #00c2ffcc;height:100%;">
+                    <img class="p-2" src="https://icon-library.com/images/attendance-icon/attendance-icon-24.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body d-flex align-items-center justify-content-center">
+                        <h4 class="card-title">Take Attendance</h4>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+    </div>
+</div>
+{% endblock %}
